@@ -1,0 +1,657 @@
+@import '_color.scss';
+@mixin btn($val1,$val2){
+    padding: $val1 $val2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    padding: 3% 0;
+    justify-content: space-between;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.fa {
+    margin-left: .4rem;
+}
+
+
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0 2%;
+    background-color: $white;
+    box-shadow: $box-shadow;
+    z-index: 1000;
+
+    nav {
+        display: flex;
+        padding: .5% 0;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+
+        ul li {
+            list-style-type: none;
+            display: inline-block;
+            @include btn(8px,12px);
+        }
+
+        img {
+            width: 100px;
+            position: relative;
+            margin-top: -20px;
+        }
+
+    }
+}
+
+
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.navbar li a {
+    color: $black;
+}
+
+.clr {
+    color: $aqua !important;
+}
+
+.btn1,
+.btn2 {
+    @include btn(.7rem,1.1rem);
+    font-size: 0.938rem;
+    background-color: $aqua;
+    border: none;
+    color: $white !important;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s linear;
+}
+
+.btn1:hover,
+.btn2:hover {
+    background-color: $white;
+    color: $aqua !important;
+}
+
+.mobileS {
+    display: none;
+}
+
+.navbar.active {
+    right: 0rem;
+    width: 100%;
+    transition: .6s linear;
+}
+
+
+/* first main */
+.firstMain {
+    background-image: $firstimg;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+
+    .box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $white;
+        text-align: center;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+            padding-top: .8rem;
+            padding-bottom: 2rem;
+            ;
+        }
+
+        .btn1 {
+            margin-right: .4rem;
+        }
+    }
+}
+
+/* tab part start */
+
+
+.tabs {
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid $border;
+
+    #tabs-nav {
+        list-style: none;
+        overflow: auto;
+        text-align: center;
+        // background-color: var($icon);
+        display: flex;
+
+        span {
+            width: 50%;
+            padding: 1rem 1rem;
+            cursor: pointer;
+            background-color: $fortext;
+
+            a {
+                text-decoration: none;
+                color: $black;
+            }
+
+        }
+    }
+}
+
+
+.addtext {
+    z-index: 100;
+    background-color:  $white !important;
+    font-weight: 700;
+}
+
+// tab 2
+
+
+#accordionExample {
+    display: none;
+}
+
+.accordion-button {
+    color: $black !important;
+}
+
+
+
+#tabs-nav span:nth-child(1) {
+    border-right: 1px solid $black;
+}
+
+
+// #tabs-nav span:hover {
+//     background-color: var($white);
+// }
+
+
+.tab-content {
+    clear: both;
+    background-color: $white;
+    padding: 10px;
+}
+
+/* tab part end */
+
+
+
+/* secondpart */
+.secondpart {
+    padding: 1% 0;
+
+    .col-a img {
+        width: 100%;
+    }
+}
+
+
+
+.imr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6%;
+}
+
+.ptr {
+    font-size: 2rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.ptr::after {
+    content: '';
+    position: absolute;
+    background: $aqua;
+    width: 10%;
+    height: 0.2rem;
+    left: 0;
+    bottom: -10px;
+}
+
+.list-group {
+    display: flex;
+}
+
+
+
+
+/* part three */
+.partthree {
+    background-image: url(image-2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    padding: 7% 0;
+}
+
+
+.col-a {
+    flex-basis: 49%;
+    border-radius: 10px;
+
+    .one {
+        margin-top: -5px;
+        background: $white;
+        border: .1px solid $border;
+        padding: 1rem;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.three {
+    font-size: 1.5rem;
+}
+
+.one h2 {
+    position: relative;
+}
+
+.one h2::after {
+    content: '';
+    position: absolute;
+    background: $aqua;
+    width: 10%;
+    height: 0.2rem;
+    left: 0;
+    bottom: -7px;
+}
+
+.one p {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.one a {
+    color: $aqua;
+}
+
+/* FOUR SECTION */
+.heading {
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.heading::after {
+    content: '';
+    position: absolute;
+    background: $aqua;
+    width: 6%;
+    height: 0.2rem;
+    left: 47%;
+    bottom: -10px;
+}
+
+/* part five */
+.partfive {
+    background: $aqua;
+    margin-top: 5%;
+    color: $white;
+}
+
+.col-8 {
+    flex-basis: 70%;
+}
+
+.col-2 {
+    flex-basis: 25%;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+        border: none;
+    }
+}
+
+
+
+.col-8 p {
+    margin-top: 1%;
+}
+
+.col-5 button {
+    border: 1px solid $white;
+}
+
+
+/* partsix */
+.partsix {
+    padding-top: 4rem;
+
+    img {
+        width: 100%;
+    }
+
+
+}
+
+/* part seven */
+.partseven {
+    text-align: center;
+
+
+}
+
+.tex {
+    color: $icon;
+}
+
+.row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parteight {
+    background-color: $form-color;
+    margin-top: 5rem;
+    padding: 3rem 0;
+}
+
+/* eightform */
+form {
+    display: block;
+}
+
+.comment-form input,
+.comment-form select,
+.comment-form textarea {
+    width: 48%;
+    padding: 10px;
+    margin: 15px 0;
+    outline: none;
+    border: none;
+    color: $icon;
+    background-color: $white;
+    color: var($icon);
+}
+.comment-form input:nth-child(odd){
+    margin-right: 20px;
+}
+.comment-form textarea {
+    width: 98%;
+}
+
+.btna {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn2 {
+    @include btn(.6rem,3rem);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.parteight .row2 p a {
+    color: $aqua;
+}
+
+
+
+/* footer */
+.footer {
+    background-color: $footer;
+    text-align: center;
+    padding: 3rem 0;
+
+    .bore {
+        display: inline-block;
+        border: .3px solid rgb(235, 217, 217);
+        height: 40px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        margin-right: 0.5%;
+
+        .bi {
+            position: relative;
+            top: 18%;
+        }
+    }
+
+    .bore .bi,
+    .foot {
+        color: $icon !important;
+    }
+    .lastpara{
+        position: relative;
+        top: 15px;
+    }
+   
+}
+
+
+.pre {
+    position: fixed;
+    display: block;
+    background-color: $red;
+    width: 40px;
+    height: 40px;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.scroll {
+    position: absolute;
+    display: block;
+    border: 8px solid;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    border-color: transparent transparent $white transparent;
+}
+
+
+@media screen and (max-width:769px) {
+    header {
+        height: 10vh;
+    }
+
+    nav {
+        position: relative;
+        top: 12px;
+    }
+
+    nav img {
+        padding-top: 1.2rem;
+    }
+
+    .mobileS {
+        font-size: 20px;
+        color: $mobile;
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 120%;
+        right: -300%;
+        width: 30rem;
+        box-shadow: $box-shadow;
+        border-radius: .5rem;
+        background: $white;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .firstMain {
+        height: 80vh;
+    }
+
+    .first {
+        display: none;
+    }
+
+    #accordionExample {
+        display: block;
+    }
+
+    .box {
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $white;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .row2 {
+        flex-direction: column;
+    }
+
+    .col-a {
+        padding-top: .7rem;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .col-5 {
+        width: 50%;
+    }
+
+    .btn1 {
+        padding: .6rem .8rem;
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width:590px) {
+    nav {
+        top: 10px;
+    }
+
+    .firstMain {
+        height: 60vh;
+
+        .box {
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: .7rem;
+                padding-top: .8rem;
+                padding-bottom: 0;
+            }
+
+            .btn1 {
+                margin-right: .1rem;
+            }
+        }
+
+    }
+
+
+    .partseven {
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: .8rem;
+        }
+    }
+
+
+
+    .btn1 {
+        @include btn(.5rem,.7rem);
+        font-size: .6rem;
+    }
+
+    .comment-form input,
+    .comment-form select,
+    .comment-form textarea {
+        width: 97%;
+    }
+
+    #tabs-nav li a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    box {
+
+        h1 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: .5rem;
+            padding-top: .5rem;
+        }
+    }
+
+
+
+    .btn1 {
+        @include btn(.4rem,.6rem);
+        font-size: .5rem;
+    }
+
+    .one p {
+        text-align: justify;
+    }
+
+    #tabs-nav li a {
+        font-size: 12px;
+    }
+}
